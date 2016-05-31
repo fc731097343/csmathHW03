@@ -10,4 +10,7 @@ run the EM.py to show the process of EM algorithm of GMM clustering.
 you should set the parameters of each gaussion distribution ahead
 K is the number of actual gaussion
 
-You may run the hw03.ipynb to show the process of both programs
+
+2D_Guassion.png shows one possible randomized generated gaussion data
+
+You may run the hm03.ipynb to show the process of both programs
