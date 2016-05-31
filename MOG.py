@@ -5,7 +5,7 @@ import random
 def multinorm_translate(_mu,_sigma):
     dim = _sigma.shape[0]
     #compute _sigma^(-1/2)
-    eigva, eigvc = np.linalg.eig(sigma)
+    eigva, eigvc = np.linalg.eig(_sigma)
     eigvc = np.matrix(eigvc)
     eigva_half = np.diag(eigva**0.5)
     sigma_half = eigvc.T * eigva_half * eigvc
@@ -13,7 +13,7 @@ def multinorm_translate(_mu,_sigma):
     #normalized gaussion
     point = [random.gauss(0,1) for i in range(dim)]
     #transform
-    point = point * sigma_half + mu
+    point = point * sigma_half + _mu
 
     return np.array(point)[0].tolist()
 
